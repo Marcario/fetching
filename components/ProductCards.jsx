@@ -13,7 +13,7 @@ function ProductCards({ prdt }) {
       >
         <img
           className="w-[100px] mx-auto  h-[100px] object-cover rounded-full "
-          src={prdt.image}
+          src={prdt.images[0]}
           alt=""
         />
         <h2 className="text-center">{prdt.title}</h2>

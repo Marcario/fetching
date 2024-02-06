@@ -6,11 +6,11 @@ export default async function page({ params: { id } }) {
   const singleProduct = await getSingleProduct(
     ` https://api.escuelajs.co/api/v1/products/${id}`
   );
-  console.log(singleProduct);
+  // console.log(singleProduct);
   return (
     <div>
       <h2>{singleProduct.title}</h2>
-      <img src={singleProduct.image} alt={singleProduct.title} />
+      <img src={singleProduct.images} alt={singleProduct.title} />
       <p>{singleProduct.price}</p>
       <p>{singleProduct.description}</p>
     </div>
