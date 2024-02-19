@@ -6,13 +6,13 @@ import CategoryCard from "./CategoryCard";
 
 function Categories({ categories }) {
   // console.log(categories);
-  const newCategories = categories.slice(0, 6);
+  const newCategories = categories.slice(0, 5);
   // console.log(newCategories);
   return (
-    <div>
+    <div className="pb-16">
       {/* header */}
 
-      <div className="flex item-center justify-between">
+      <div className="flex item-center justify-between ">
         <div className="flex flex-col">
           <h2 className="text-3xl font-medium">Popular categories</h2>
           <p>Choose from wide variety of items</p>
@@ -27,8 +27,7 @@ function Categories({ categories }) {
       </div>
       {/* categories */}
       <div>
-        <h2 className="text-3xl font-medium">Categories</h2>
-        <div className="py-8 gap-6 grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2">
+        <div className="py-8 gap-6 grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2">
           {/* categorycard */}
           {newCategories.map((category, i) => {
             return <CategoryCard category={category} key={i} />;

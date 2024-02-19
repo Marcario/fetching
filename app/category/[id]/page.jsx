@@ -6,10 +6,14 @@ export default async function page({ params: { id } }) {
     `https://api.escuelajs.co/api/v1/categories/${id}`
   );
   return (
-    <div>
+    <div className="max-w-3xl mx-auto  items-center p-20">
+      <img
+        src={SingleCategory.image}
+        alt={SingleCategory.name}
+        className="max-w-80 rounded-2xl"
+      />
       <p>{SingleCategory.id}</p>
       <p>{SingleCategory.name}</p>
-      <img src={SingleCategory.image} alt={SingleCategory.name} />
     </div>
   );
 }

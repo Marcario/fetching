@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
-import ProductCards from "./ProductCards";
+import ProductCard from "./ProductCard";
 
-function Products(products) {
-  const finalproducts = products.products;
+function Products({ products }) {
+  console.log(products);
+  // const finalproducts = products.products;
   // console.log(finalproducts);
   return (
     <div>
@@ -21,12 +22,8 @@ function Products(products) {
         </Link>
       </div> */}
       <div className="grid grid-cols-4 gap-4 p-8">
-        {finalproducts.slice(0, 12).map((prdt, i) => {
-          return (
-            <>
-              <ProductCards prdt={prdt} />
-            </>
-          );
+        {products.slice(0, 13).map((prdt, i) => {
+          return <ProductCard prdt={prdt} key={i} />;
         })}
       </div>
     </div>

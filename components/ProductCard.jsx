@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React from "react";
 
-function ProductCards({ prdt }) {
+function ProductCard({ prdt }) {
   // console.log(prdt);
 
   return (
@@ -24,4 +24,4 @@ function ProductCards({ prdt }) {
   );
 }
 
-export default ProductCards;
+export default ProductCard;
